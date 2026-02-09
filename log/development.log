@@ -1,0 +1,41 @@
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2026-02-09 14:36:06.493746', '2026-02-09 14:36:06.493748') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePosts (20260209143536)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "posts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20260209143536') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."title" = ? LIMIT ?[0m  [["title", "Getting Started with Rails 7.1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["title", "Getting Started with Rails 7.1"], ["body", "Rails 7.1 brings many exciting features including async queries, Dockerfile generation by default, and improved security features."], ["created_at", "2026-02-09 14:36:06.520561"], ["updated_at", "2026-02-09 14:36:06.520561"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."title" = ? LIMIT ?[0m  [["title", "Angular 18 Standalone Components"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.7ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["title", "Angular 18 Standalone Components"], ["body", "Angular 18 makes standalone components the default, simplifying application architecture and reducing the need for NgModules."], ["created_at", "2026-02-09 14:36:06.522399"], ["updated_at", "2026-02-09 14:36:06.522399"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."title" = ? LIMIT ?[0m  [["title", "Understanding CSRF Protection"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["title", "Understanding CSRF Protection"], ["body", "Cross-Site Request Forgery (CSRF) is an attack that tricks a user into submitting a malicious request. CSRF tokens are the standard defense mechanism."], ["created_at", "2026-02-09 14:36:06.524505"], ["updated_at", "2026-02-09 14:36:06.524505"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."title" = ? LIMIT ?[0m  [["title", "Full-Stack Development with Rails + Angular"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["title", "Full-Stack Development with Rails + Angular"], ["body", "Combining Rails as a backend API with Angular on the frontend gives you the best of both worlds: Rails' convention-over-configuration and Angular's powerful component system."], ["created_at", "2026-02-09 14:36:06.526466"], ["updated_at", "2026-02-09 14:36:06.526466"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."title" = ? LIMIT ?[0m  [["title", "Cookie-Based CSRF in SPAs"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["title", "Cookie-Based CSRF in SPAs"], ["body", "Single Page Applications can use cookie-based CSRF tokens. The server sets an XSRF-TOKEN cookie, and the client sends it back as an X-XSRF-TOKEN header on mutating requests."], ["created_at", "2026-02-09 14:36:06.527986"], ["updated_at", "2026-02-09 14:36:06.527986"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mPost Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+Started GET "/api/posts" for ::1 at 2026-02-09 10:05:13 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::PostsController#index as */*
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  ↳ app/controllers/api/posts_controller.rb:6:in `index'
+Completed 200 OK in 23ms (Views: 4.0ms | ActiveRecord: 1.4ms | Allocations: 20543)
+
+

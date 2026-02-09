@@ -1,0 +1,50 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.empty {
+  text-align: center;
+  color: #666;
+  padding: 40px;
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.post-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  background: #fff;
+}
+
+.post-card h2 {
+  margin: 0 0 8px 0;
+  font-size: 1.25rem;
+}
+
+.post-card p {
+  color: #555;
+  margin: 0 0 16px 0;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}

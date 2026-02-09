@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="header">
+    <h1>Posts</h1>
+    <a routerLink="/posts/new" class="btn btn-primary">New Post</a>
+  </div>
+
+  @if (posts.length === 0) {
+    <p class="empty">No posts yet. Create one!</p>
+  }
+
+  <div class="posts">
+    @for (post of posts; track post.id) {
+      <div class="post-card">
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.body }}</p>
+        <div class="actions">
+          <a [routerLink]="['/posts', post.id, 'edit']" class="btn btn-secondary">Edit</a>
+          <button (click)="deletePost(post.id!)" class="btn btn-danger">Delete</button>
+        </div>
+      </div>
+    }
+  </div>
+</div>

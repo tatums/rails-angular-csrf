@@ -1,0 +1,2 @@
+rails: rails server -p 3000
+angular: cd frontend && npx ng serve --proxy-config proxy.conf.json --port 4200

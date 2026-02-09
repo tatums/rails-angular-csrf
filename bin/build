@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+echo "==> Building Angular frontend..."
+cd "$(dirname "$0")/../frontend"
+npx ng build
+
+echo "==> Angular build output written to public/"
+echo "==> Start Rails with: rails server"

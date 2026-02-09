@@ -1,0 +1,16 @@
+.navbar {
+  background: #2c3e50;
+  padding: 12px 24px;
+  margin-bottom: 24px;
+}
+
+.brand {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.brand:hover {
+  color: #ecf0f1;
+}
