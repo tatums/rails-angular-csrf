@@ -1,13 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { ActivatedRoute, Router, RouterLink } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { PostService } from '../../services/post.service';
 import { Post } from '../../models/post';
 
 @Component({
   selector: 'app-post-form',
-  standalone: true,
-  imports: [FormsModule, RouterLink],
   templateUrl: './post-form.component.html',
   styleUrl: './post-form.component.css'
 })
